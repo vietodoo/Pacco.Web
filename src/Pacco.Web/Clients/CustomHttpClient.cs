@@ -28,7 +28,6 @@ namespace Pacco.Web.Clients
             _options = options;
             _logger = logger;
             _client.BaseAddress = new Uri(options.ApiUrl);
-            _client.DefaultRequestHeaders.TryAddWithoutValidation("Content-Type", "application/json");
         }
 
         public void SetAccessToken(string accessToken)
