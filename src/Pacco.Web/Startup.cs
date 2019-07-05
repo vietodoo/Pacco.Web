@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Components.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Pacco.Web.Clients;
 
 namespace Pacco.Web
 {
@@ -7,6 +8,13 @@ namespace Pacco.Web
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton(new HttpClientOptions
+            {
+                ApiUrl = "http://localhost:5000",
+                Retries = 1
+            });
+            services.AddTransient<IHttpClient, CustomHttpClient>();
+            services.AddTransient<IIdentityServiceClient, IdentityServiceClient>();
         }
 
         public void Configure(IComponentsApplicationBuilder app)
