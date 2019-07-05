@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Components.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Pacco.Web.Areas;
 using Pacco.Web.Clients;
 
 namespace Pacco.Web
@@ -14,7 +15,7 @@ namespace Pacco.Web
                 Retries = 1
             });
             services.AddTransient<IHttpClient, CustomHttpClient>();
-            services.AddTransient<IIdentityServiceClient, IdentityServiceClient>();
+            services.RegisterIdentityArea();
         }
 
         public void Configure(IComponentsApplicationBuilder app)

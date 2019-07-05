@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Pacco.Web.DTO;
 
-namespace Pacco.Web.Clients
+namespace Pacco.Web.Areas.Identity.Services
 {
     public interface IIdentityServiceClient
     {
