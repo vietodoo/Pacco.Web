@@ -1,12 +1,12 @@
 @page "/identity"
-@layout MainLayout
+@layout Main
 @using Pacco.Web.Areas.Identity.Components
 @inject IdentityComponent Component;
 
 <h1>Identity</h1>
 
-<button type="button" class="btn btn-primary" onclick=@(() => Component.SignUpAsync("pacco-user1@mailinator.com", "secret", "user"))>Sign up</button>
-<button type="button" class="btn btn-primary" onclick=@(() => Component.SignInAsync("pacco-user1@mailinator.com", "secret"))>Sign in</button>
+<button type="button" class="button is-primary" onclick=@(() => Component.SignUpAsync("pacco-user1@mailinator.com", "secret", "user"))>Sign up</button>
+<button type="button" class="button is-primary" onclick=@(() => Component.SignInAsync("pacco-user1@mailinator.com", "secret"))>Sign in</button>
 
 @code {
     protected override async Task OnInitAsync()
