@@ -1,6 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Pacco.Web.Areas.Identity.Components;
 using Pacco.Web.Areas.Identity.Services;
+using Pacco.Web.Shared;
 
 namespace Pacco.Web.Areas
 {
@@ -10,6 +11,7 @@ namespace Pacco.Web.Areas
         {
             services.AddTransient<IIdentityServiceClient, IdentityServiceClient>();
             services.AddSingleton<IdentityComponent>();
+            services.AddSingleton<MenuComponent>();
             
             return services;
         }

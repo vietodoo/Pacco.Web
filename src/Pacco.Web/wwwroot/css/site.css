@@ -1,6 +1,5 @@
-﻿.footer {
-    margin-top: 8%;
-    display: flex;
+﻿.footer-displaying {
+    margin-top: 15%;
     min-height: 35vh;
 }
 
